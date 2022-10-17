@@ -33,3 +33,14 @@ function theme_bg_color($bg_color = false) {
 function clean_phone($phone) {
     return preg_replace('/[^0-9]/', '', $phone);
 }
+
+// logo
+function logoPath() {
+    $logoPath = get_template_directory_uri() . '/images/logo.svg';
+
+    if ($custom_logo_id = get_theme_mod('custom_logo')) {
+        $logoPath = wp_get_attachment_url($custom_logo_id);
+    }
+
+    return $logoPath;
+}

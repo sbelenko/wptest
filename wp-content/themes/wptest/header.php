@@ -15,7 +15,7 @@
                 <div class="container">
                     <strong class="logo">
                         <a href="<?php echo esc_url(home_url('/')) ?>">
-                            <img src="images/logo.svg" alt="<?php bloginfo('name') ?>" />
+                            <img src="<?php echo logoPath() ?>" alt="<?php bloginfo('name') ?>" />
                         </a>
                     </strong>
                     <div class="nav-holder">

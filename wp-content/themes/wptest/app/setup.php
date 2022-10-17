@@ -23,12 +23,12 @@ add_action('themecheck_checks_loaded', function () {
 
 add_theme_support('automatic-feed-links');
 
-/* Custom logo support. Uncomment or delete on production
+# Custom logo support. Uncomment or delete on production
 function theme_add_logo_support() {
-	add_theme_support( 'custom-logo' );
+    add_theme_support('custom-logo');
 }
-add_action( 'after_setup_theme', 'theme_add_logo_support' );
-*/
+add_action('after_setup_theme', 'theme_add_logo_support');
+
 
 if (!isset($content_width)) {
     $content_width = 900;
