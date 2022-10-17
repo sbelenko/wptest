@@ -89,14 +89,6 @@ function basetheme_options_capability() {
 
 add_action('admin_init', 'basetheme_options_capability');
 
-// theme options tab in appearance
-if (function_exists('acf_add_options_sub_page') && current_user_can('theme_options_view')) {
-    acf_add_options_sub_page(array(
-        'title' => 'Theme Options',
-        'parent' => 'themes.php',
-    ));
-}
-
 // commented block below, because there may be errors with js, if need you can uncomment this block
 add_filter('script_loader_tag', function ($tag, $handle, $src) {
     if (!is_admin())

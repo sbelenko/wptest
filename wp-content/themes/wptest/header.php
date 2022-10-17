@@ -19,31 +19,18 @@
                         </a>
                     </strong>
                     <div class="nav-holder">
-                        <nav>
-                            <ul class="nav">
-                                <li><a href="#">Home</a></li>
-                                <li>
-                                    <a href="#">Products</a>
-                                    <ul>
-                                        <li><a href="#">Product 1</a></li>
-                                        <li><a href="#">Product 2</a></li>
-                                        <li><a href="#">Product 3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Resources</a>
-                                    <ul>
-                                        <li><a href="#">Resource 1</a></li>
-                                        <li><a href="#">Resource 2</a></li>
-                                        <li><a href="#">Resource 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Pricing</a></li>
-                            </ul>
-                        </nav>
+                        <?php if (has_nav_menu('primary')): ?>
+                            <?php
+                            wp_nav_menu([
+                                'container' => 'nav',
+                                'menu_class' => 'nav',
+                                'theme_location' => 'primary'
+                            ]);
+                            ?>
+                        <?php endif; ?>
                         <div class="buttons-holder">
-                            <a href="#" class="btn btn-link">Log in</a>
-                            <a href="#" class="btn btn-primary">Sign up</a>
+                            <a href="#" class="btn btn-link"><?php _e('Log in', 'base') ?></a>
+                            <a href="#" class="btn btn-primary"><?php _e('Sign up', 'base') ?></a>
                         </div>
                     </div>
                     <a href="#" class="nav-opener"><span></span></a>
