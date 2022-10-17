@@ -1,0 +1,17 @@
+# conf
+wp-config.php
+
+# base plugin
+/wp-content/plugins/hello.php
+
+# base themes
+/wp-content/themes/twenty*/
+
+# uploads
+#/wp-content/uploads/
+
+# Log files
+*.log
+
+# other
+**/.DS_Store
