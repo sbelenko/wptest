@@ -28,10 +28,7 @@
                             ]);
                             ?>
                         <?php endif; ?>
-                        <div class="buttons-holder">
-                            <a href="#" class="btn btn-link"><?php _e('Log in', 'base') ?></a>
-                            <a href="#" class="btn btn-primary"><?php _e('Sign up', 'base') ?></a>
-                        </div>
+                        <?php get_template_part('template-parts/header/user-links') ?>
                     </div>
                     <a href="#" class="nav-opener"><span></span></a>
                 </div>
